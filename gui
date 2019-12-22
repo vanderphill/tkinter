@@ -3,7 +3,7 @@ from tkinter import *
 root = Tk()
 
 
-myLabel1 = Label(root, text=" 1 ")
+myLabel1 = Label(root, text=" adding more words and leters to a column \n or row makes it wider and/or taller")
 myLabel2 = Label(root, text=" 2 ")
 myLabel3 = Label(root, text=" 3 ")
 myLabel4 = Label(root, text=" 4 ")
