@@ -6,7 +6,8 @@ def myclick(): #function for button click
     myLabel = Label(root,text="YOU CLICK THE BUTTON!!!")
     myLabel.pack() #shoves the label into the window (under the button which already exists
 
-myButton = Button(root, text="click me", padx=100,pady=100,command=myclick)
+myButton = Button(root, text="click me", padx=100,pady=100,bg="red",fg="blue",command=myclick)
+#made button background red and text (foreground) blue
 #creates button with text "click me" padx controls button width pady controls button tallness command passes in function to exicute when clicked
 myButton.pack() #shoves the button onto the window
 root.mainloop() #run main loop
