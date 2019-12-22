@@ -1,0 +1,5 @@
+from tkinter import * #imports tkinter
+root = Tk()  #creates window
+myLabel = Label(root, text="hello world") #creates variable label
+myLabel.pack #shoves variable label into window (packs puts it in the center and subsiquesnt packs go center top to bottom
+root.mainloop() #runs the loop function
