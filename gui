@@ -1,28 +1,72 @@
 from math import *
 from tkinter import *
-
+second = 0
+current = 0
+operator = "add"
 root = Tk()
 
-def clear():  #function for button click
-def squarert():  # function for button click
-def divide():  # function for button click
-def seven():  # function for button click
-def eight():  # function for button click
-def nine():  # function for button click
-def times():  # function for button click
-def four():  # function for button click
-def five():  # function for button click
-def six():  # function for button click
-def minus():  # function for button click
-def one():  # function for button click
-def two():  # function for button click
-def three():  # function for button click
-def plus():  # function for button click
-def negative():  # function for button click
-def zero():  # function for button click
-def decimal():  # function for button click
-def equals():  # function for button click
 
+def clear():  #function for button click
+    global current = 0
+def squarert():  # function for button click
+    global current = sqrt(current)
+def divide():  # function for button click
+    global second = current
+    global current = 0
+    global operator = "divide"
+def seven():  # function for button click
+    global current = ((current *10)+7)
+def eight():  # function for button click
+    global current = ((current * 10) + 8)
+def nine():  # function for button click
+    global current = ((current * 10) + 9)
+
+def times():  # function for button click
+    global second = current
+    global current = 0
+    global operator = "times"
+def four():  # function for button click
+    global current = ((current * 10) + 4)
+
+def five():  # function for button click
+    global current = ((current * 10) + 5)
+
+def six():  # function for button click
+    global current = ((current * 10) + 6)
+
+def minus():  # function for button click
+    global second = current
+    global current = 0
+    global operator = "minus"
+def one():  # function for button click
+    global current = ((current * 10) + 1)
+
+def two():  # function for button click
+    global current = ((current * 10) + 2)
+
+def three():  # function for button click
+    global current = ((current * 10) + 3)
+
+def plus():  # function for button click
+    global second = current
+    global current = 0
+    global operator = "add"
+def negative():  # function for button click
+    global current = (current * -1)
+def zero():  # function for button click
+    global current = ((current * 10) + 0)
+
+def decimal():  # function for button click
+
+def equals():  # function for button click
+    if operator == "divide":
+        global current = second / current
+    elif operator == "add":
+        global current = second + current
+    elif operator == "times":
+        global current = second * current
+    elif operator == "minus":
+        global current = second - current
 
 myLabel = Label(root,text="0",font=("Helvetica", 26),bg="white")
 myLabel.grid(row=0,column=3)
@@ -67,3 +111,4 @@ decimalButton.grid(row=5,column=2)
 equalsButton.grid(row=5,column=3)
 
 root.mainloop() #run main loop
+
