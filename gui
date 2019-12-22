@@ -1,14 +1,69 @@
+from math import *
 from tkinter import *
 
 root = Tk()
 
-def myclick(): #function for button click
-    myLabel = Label(root,text="YOU CLICK THE BUTTON!!!")
-    myLabel.pack() #shoves the label into the window (under the button which already exists
+def clear():  #function for button click
+def squarert():  # function for button click
+def divide():  # function for button click
+def seven():  # function for button click
+def eight():  # function for button click
+def nine():  # function for button click
+def times():  # function for button click
+def four():  # function for button click
+def five():  # function for button click
+def six():  # function for button click
+def minus():  # function for button click
+def one():  # function for button click
+def two():  # function for button click
+def three():  # function for button click
+def plus():  # function for button click
+def negative():  # function for button click
+def zero():  # function for button click
+def decimal():  # function for button click
+def equals():  # function for button click
 
-myButton = Button(root, text="click me", padx=100,pady=100,bg="red",fg="blue",command=myclick)
-#made button background red and text (foreground) blue
-#creates button with text "click me" padx controls button width pady controls button tallness command passes in function to exicute when clicked
-myButton.pack() #shoves the button onto the window
+
+myLabel = Label(root,text="0",font=("Helvetica", 26),bg="white")
+myLabel.grid(row=0,column=3)
+clearButton = Button(root, text=" ce  ", padx=20,pady=20,command=clear)
+squarerootButton = Button(root, text="sqrt", padx=20,pady=20,command=squarert)
+divideButton = Button(root, text="   /  ", padx=20,pady=20,command=divide)
+sevenButton = Button(root, text="   7  ", padx=20,pady=20,command=seven)
+eightButton = Button(root, text="   8  ", padx=20,pady=20,command=eight)
+nineButton = Button(root, text="  9   ", padx=20,pady=20,command=nine)
+timesButton = Button(root, text="  X   ", padx=20,pady=20,command=times)
+fourButton = Button(root, text="  4   ", padx=20,pady=20,command=four)
+fiveButton = Button(root, text="  5   ", padx=20,pady=20,command=five)
+sixButton = Button(root, text="  6   ", padx=20,pady=20,command=six)
+minusButton = Button(root, text="   -  ", padx=20,pady=20,command=minus)
+oneButton = Button(root, text="  1   ", padx=20,pady=20,command=one)
+twoButton = Button(root, text="  2   ", padx=20,pady=20,command=two)
+threeButton = Button(root, text="  3   ", padx=20,pady=20,command=three)
+addButton = Button(root, text="  +   ", padx=20,pady=20,command=plus)
+negativeButton = Button(root, text="   -  ", padx=20,pady=20,command=negative)
+zeroButton = Button(root, text="  0   ", padx=20,pady=20,command=zero)
+decimalButton = Button(root, text="   .   ", padx=20,pady=20,command=decimal)
+equalsButton = Button(root, text="  =   ", padx=20,pady=20,command=equals)
+
+clearButton.grid(row=1,column=0)
+squarerootButton.grid(row=1,column=2)
+divideButton.grid(row=1,column=3)
+sevenButton.grid(row=2,column=0)
+eightButton.grid(row=2,column=1)
+nineButton.grid(row=2,column=2)
+timesButton.grid(row=2,column=3)
+fourButton.grid(row=3,column=0)
+fiveButton.grid(row=3,column=1)
+sixButton.grid(row=3,column=2)
+minusButton.grid(row=3,column=3)
+oneButton.grid(row=4,column=0)
+twoButton.grid(row=4,column=1)
+threeButton.grid(row=4,column=2)
+addButton.grid(row=4,column=3)
+negativeButton.grid(row=5,column=0)
+zeroButton.grid(row=5,column=1)
+decimalButton.grid(row=5,column=2)
+equalsButton.grid(row=5,column=3)
+
 root.mainloop() #run main loop
-
