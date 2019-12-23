@@ -30,10 +30,27 @@ def squarert():  # function for button click
     myLabel.destroy()
     global current
     global decimal
+    global answer
+    answer = True
     decimal = False
     global decplace
     decplace = 10
     current = sqrt(current)
+    print("square root")
+    myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
+    myLabel.grid(row=0, column=2, columnspan=3)
+    print(current)
+def square():  # function for button click
+    global myLabel
+    myLabel.destroy()
+    global current
+    global decimal
+    global answer
+    answer = True
+    decimal = False
+    global decplace
+    decplace = 10
+    current = current**2
     print("square root")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
     myLabel.grid(row=0, column=2, columnspan=3)
@@ -355,7 +372,8 @@ def equals():  # function for button click
 myLabel = Label(root,text=str(current),font=("Helvetica", 26),bg="white")
 myLabel.grid(row=0,column=2, columnspan=3)
 clearButton = Button(root, text=" ce  ", padx=55,pady=20,bg="lightblue",command=clear)
-squarerootButton = Button(root, text="sqrt", padx=20,pady=20,bg="lightblue",command=squarert)
+squarebutton = Button(root,text=" sq   ", padx=20,pady=3, bg="lightblue",command=square)
+squarerootButton = Button(root, text=" sqrt", padx=20,pady=3,bg="lightblue",command=squarert)
 divideButton = Button(root, text="   /  ", padx=20,pady=20,bg="lightblue",command=divide)
 sevenButton = Button(root, text="   7  ", padx=20,pady=20,command=seven)
 eightButton = Button(root, text="   8  ", padx=20,pady=20,command=eight)
@@ -374,25 +392,26 @@ zeroButton = Button(root, text="  0   ", padx=20,pady=20,command=zero)
 decimalButton = Button(root, text="   .   ", padx=20,pady=20,bg="lightblue",command=decimal)
 equalsButton = Button(root, text="  =   ", padx=20,pady=20,bg="red",command=equals)
 
-clearButton.grid(row=1,column=0, columnspan=2)
-squarerootButton.grid(row=1,column=2)
-divideButton.grid(row=1,column=3)
-sevenButton.grid(row=2,column=0)
-eightButton.grid(row=2,column=1)
-nineButton.grid(row=2,column=2)
-timesButton.grid(row=2,column=3)
-fourButton.grid(row=3,column=0)
-fiveButton.grid(row=3,column=1)
-sixButton.grid(row=3,column=2)
-minusButton.grid(row=3,column=3)
-oneButton.grid(row=4,column=0)
-twoButton.grid(row=4,column=1)
-threeButton.grid(row=4,column=2)
-addButton.grid(row=4,column=3)
-negativeButton.grid(row=5,column=0)
-zeroButton.grid(row=5,column=1)
-decimalButton.grid(row=5,column=2)
-equalsButton.grid(row=5,column=3)
+clearButton.grid(row=1,column=0, columnspan=2, rowspan=2)
+squarerootButton.grid(row=2,column=2,rowspan=1)
+squarebutton.grid(row=1,column=2,rowspan=1)
+divideButton.grid(row=1,column=3,rowspan=2)
+sevenButton.grid(row=3,column=0)
+eightButton.grid(row=3,column=1)
+nineButton.grid(row=3,column=2)
+timesButton.grid(row=3,column=3)
+fourButton.grid(row=4,column=0)
+fiveButton.grid(row=4,column=1)
+sixButton.grid(row=4,column=2)
+minusButton.grid(row=4,column=3)
+oneButton.grid(row=5,column=0)
+twoButton.grid(row=5,column=1)
+threeButton.grid(row=5,column=2)
+addButton.grid(row=5,column=3)
+negativeButton.grid(row=6,column=0)
+zeroButton.grid(row=6,column=1)
+decimalButton.grid(row=6,column=2)
+equalsButton.grid(row=6,column=3)
 
 root.mainloop() #run main loop
 
