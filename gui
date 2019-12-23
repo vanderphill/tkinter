@@ -1,33 +1,50 @@
 from math import *
 from tkinter import *
-#second = 0
+second = 0
 current = 0
-#operator = "add"
+operator = "add"
+decimal = False
+decplace = 10
+answer = False
 root = Tk()
-root.title("calculator")
+root.title("Phill's Calculator")
 
 
 def clear():  #function for button click
     global myLabel
+    global answer
+    answer = False
     myLabel.destroy()
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     current = 0
     print("clear")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def squarert():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     current = sqrt(current)
     print("square root")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0, column=3)
+    myLabel.grid(row=0, column=2, columnspan=3)
     print(current)
 def divide():  # function for button click
     global second
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     second = current
     current = 0
     global operator
@@ -37,33 +54,76 @@ def seven():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current *10)+7)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+    if decimal == True:
+        current = ((current * 1) + 7/decplace)
+
+        decplace = decplace * 10
+    else:
+        current = ((current *10)+7)
     print("7")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def eight():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 8)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 8/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 8)
     print("8")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def nine():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 9)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 9/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 9)
     print("9")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 
 def times():  # function for button click
     global second
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     second = current
     current = 0
     global operator
@@ -72,32 +132,74 @@ def four():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 4)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 4/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 4)
     print("4")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def five():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 5)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+    if decimal == True:
+        current = ((current * 1) + 5/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 5)
     print("5")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def six():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 6)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 6/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 6)
     print("6")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def minus():  # function for button click
     global second
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     second = current
     current = 0
     global operator
@@ -106,33 +208,75 @@ def one():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 1)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+    if decimal == True:
+        current = ((current * 1) + 1/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 1)
     print("1")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def two():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 2)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 2/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 2)
     print("2")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def three():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 3)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 3/decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 3)
     print("3")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 
 def plus():  # function for button click
     global second
     global current
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     second = current
     current = 0
     global operator
@@ -144,25 +288,55 @@ def negative():  # function for button click
     current = (current * -1)
     print("negative")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 def zero():  # function for button click
     global myLabel
     myLabel.destroy()
     global current
-    current = ((current * 10) + 0)
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+
+    if decimal == True:
+        current = ((current * 1) + 0 / decplace)
+        decplace = decplace * 10
+    else:
+        current = ((current * 10) + 0)
     print("0")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 
 def decimal():  # function for button click
+    global current
+    global decplace
+    global answer
+    global decimal
+    if answer == True:
+        current = 0
+        answer = False
+        decplace = 10
+        decimal = False
+    decimal = True
+
     print("not working yet")
 def equals():  # function for button click
     global myLabel
+    global answer
+    answer = True
     myLabel.destroy()
     global current
     global second
+    global decimal
+    decimal = False
+    global decplace
+    decplace = 10
     if operator == "divide":
         current = second / current
     elif operator == "add":
@@ -174,12 +348,12 @@ def equals():  # function for button click
     second=0
     print("equals")
     myLabel = Label(root, text=str(current), font=("Helvetica", 26), bg="white")
-    myLabel.grid(row=0,column=3)
+    myLabel.grid(row=0,column=2, columnspan=3)
     print(current)
 
 
 myLabel = Label(root,text=str(current),font=("Helvetica", 26),bg="white")
-myLabel.grid(row=0,column=3)
+myLabel.grid(row=0,column=2, columnspan=3)
 clearButton = Button(root, text=" ce  ", padx=55,pady=20,bg="lightblue",command=clear)
 squarerootButton = Button(root, text="sqrt", padx=20,pady=20,bg="lightblue",command=squarert)
 divideButton = Button(root, text="   /  ", padx=20,pady=20,bg="lightblue",command=divide)
@@ -221,5 +395,4 @@ decimalButton.grid(row=5,column=2)
 equalsButton.grid(row=5,column=3)
 
 root.mainloop() #run main loop
-
 
