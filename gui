@@ -1,14 +1,15 @@
 from tkinter import *
-
 root = Tk()
+e = Entry(root,width=50, bg="white",fg="blue",borderwidth=5)
+#create text box named "e". width controls width, background foreground colors, and border width
 
-def myclick(): #function for button click
-    myLabel = Label(root,text="YOU CLICK THE BUTTON!!!")
-    myLabel.pack() #shoves the label into the window (under the button which already exists
 
-myButton = Button(root, text="click me", padx=100,pady=100,bg="red",fg="blue",command=myclick)
-#made button background red and text (foreground) blue
-#creates button with text "click me" padx controls button width pady controls button tallness command passes in function to exicute when clicked
-myButton.pack() #shoves the button onto the window
-root.mainloop() #run main loop
+e.pack()#packs entry box
 
+def button1():
+    myLabel = Label(root,text="you are " + e.get()) #calls text box contents into label
+    myLabel.pack()
+
+mybutton = Button(root, text="enter your name", command=button1)
+mybutton.pack()
+root.mainloop()
