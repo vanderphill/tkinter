@@ -1,0 +1,16 @@
+from tkinter import *
+import datetime
+
+root = Tk()
+def start():
+    global starttime
+    starttime = datetime.datetime.now()
+def stop():
+    dif = datetime.datetime.now() - starttime
+    mylabel = Label(root,text=dif)
+    mylabel.pack()
+startB = Button(root,text="start",command=start)
+stopB = Button(root,text="stop",command=stop)
+startB.pack()
+stopB.pack()
+root.mainloop()
