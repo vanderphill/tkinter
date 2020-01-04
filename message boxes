@@ -1,0 +1,41 @@
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+def showinfo():
+    Response = messagebox.showinfo("Show info","this box is showing info")
+    Label(root,text=Response).pack()
+    # ok returns ok
+def showwarning():
+    Response = messagebox.showwarning("Show warning","this box is showing warning")
+    Label(root, text=Response).pack()
+    # ok returns ok
+def showerror():
+    Response = messagebox.showerror("Show error","this box is showing error")
+    Label(root, text=Response).pack()
+    # ok returns ok
+def askquestion():
+    Response = messagebox.askquestion("Ask Question","this box is asking a question")
+    Label(root, text=Response).pack()
+    #yes returns yes
+    #no returns no
+def askokcancel():
+    Response = messagebox.askokcancel("Ask OK Cancel","this box is asking ok cancel")
+    Label(root, text=Response).pack()
+    #ok returns 1
+    # cancel returns 0
+
+def askyesno():
+    Response = messagebox.askyesno("Ask Yes No","this box is asking yes or no")
+    Label(root, text=Response).pack()
+    #yes returns 1
+    #no returns 0
+
+A = Button(root,text="showinfo",command=showinfo).pack()
+B = Button(root,text="showwarning",command=showwarning).pack()
+C = Button(root,text="showerror",command=showerror).pack()
+D = Button(root,text="askquestion",command=askquestion).pack()
+E = Button(root,text="ask ok cancel",command=askokcancel).pack()
+F = Button(root,text="ask yes no",command=askyesno).pack()
+
+root.mainloop(
